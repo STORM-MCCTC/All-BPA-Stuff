@@ -1,4 +1,4 @@
-input_file = open('WorldSeriesWinners.txt', 'r')
+input_file = open('python-335-2022/WorldSeriesWinners.txt', 'r')
 
 start_year = 1902
 
