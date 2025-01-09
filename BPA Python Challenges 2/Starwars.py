@@ -16,11 +16,13 @@ def display_status():
 
 def treat_ewok():
     global medical_supplies
+    global energy
     global ewoks_treated
     choice = ["Minor", "Moderate", "Severe"]
     ewoks_condition = random.choice(choice)
     if ewoks_condition == "Minor" and medical_supplies >= 5:
         medical_supplies -= 5
+        energy -= 5
         ewoks_treated += 1
         print("\nTreated ewok in Minor condition")
         display_status()
@@ -30,6 +32,7 @@ def treat_ewok():
         pass
     if ewoks_condition == "Moderate" and medical_supplies >= 10:
         medical_supplies -= 10
+        energy -= 10
         ewoks_treated += 1
         print("\nTreated ewok in Moderate condition")
         display_status()
@@ -39,6 +42,7 @@ def treat_ewok():
         pass
     if ewoks_condition == "Severe" and medical_supplies >= 15:
         medical_supplies -= 15
+        energy -= 15
         ewoks_treated += 1
         print("\nTreated ewok in Severe condition")
         display_status()
